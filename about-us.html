@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ROOTFY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cssin.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+  <nav class="main-nav">
+    <div class="brand">
+        <a href="index.html" class="logo-link">
+            <img src="media/logo1.png" alt="ROOTFY logo" class="logo-img">
+        </a>
+    </div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sell.html">Sell a Plant</a></li>
+      <li><a href="about-us.html" class="active">About Us</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+      <li class="cart-dropdown">
+        <i class="bi bi-basket2-fill cart-icon"></i>
+        <span id="cartCount" class="cart-count">0</span>
+        <div class="cart-menu">
+          <div id="cartItems"></div>
+          <p id="cartTotal"></p>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+      </li>
+    </ul>
+
+    
+  </nav>
+
+
+  <div class="welcome-banner py-2">
+    <p>Welcome to <strong>ROOTFY</strong> find your perfect houseplant and bring nature home!</p>
+  </div>
+</header>
+
+  <main class="py-3">
+    <section id="about">
+
+      <h1>Meet Our Team</h1>
+       <table class="cards-table">
+        <tr>
+          <td>
+      <div class="cards-container">
+
+        <div class="member-card">
+          <img src="media/Media-Asayle.jpeg" alt="Asayel photo" class="profile-pic">
+          <h3>Asayel Alayda</h3>
+          <p><strong>ID:</strong> 2316747</p>
+          <p><strong>Role:</strong> Contact Page Developer</p>
+          <a href="https://github.com/asayelal91-hue" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/asayel-alayda-69ba08395" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <div class="member-card">
+          <img src="media/Media-Jana.jpeg" alt="Jana photo" class="profile-pic">
+          <h3>Jana Aleliani</h3>
+          <p><strong>ID:</strong> 2315752</p>
+          <p><strong>Role:</strong> Selling Page Developer</p>
+          <a href="https://github.com/jejeeliani91-afk" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/jana-mohmmad-527526391" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <div class="member-card">
+          <img src="media/Media-Einas.jpeg" alt="Einas photo" class="profile-pic">
+          <h3>Einas Alsolami</h3>
+          <p><strong>ID:</strong> 2311709</p>
+          <p><strong>Role:</strong> Home Page Developer</p>
+          <a href="https://github.com/oee3n" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/enas-alsolami-cs" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <div class="member-card">
+          <img src="media/Media-Ghada.jpg" alt="Ghada photo" class="profile-pic">
+          <h3>Ghada Hazazi</h3>
+          <p><strong>ID:</strong> 2316780</p>
+          <p><strong>Role:</strong> About us Page Designer</p>
+          <a href="https://github.com/3ixns" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/ghada-hazazi-a33587329" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+        </td>
+        </tr>
+      </table>
+      <p class="team-desc py-3">
+        We are Computer Science students at the University of Jeddah, working together to create an elegant and functional web experience for plant lovers.
+      </p>
+
+     
+
+
+    </section>
+      <h2 class="mt-5 text-center">Send Us a Message</h2>
+
+<div class="about-form-container">
+  <form id="aboutForm" class="about-form">
+
+    <div class="mb-3">
+      <label class="form-label">Your Name</label>
+      <input type="text" id="name" class="form-control" placeholder="Enter your name">
+      <small class="text-danger error-msg"></small>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Your Email</label>
+      <input type="email" id="email" class="form-control" placeholder="Enter your email">
+      <small class="text-danger error-msg"></small>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Your Message</label>
+      <textarea id="message" rows="4" class="form-control" placeholder="Write your message here..."></textarea>
+      <small class="text-danger error-msg"></small>
+    </div>
+
+    <button type="submit" class="btn-submit-about">Send Message</button>
+    </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 ROOTFY. All rights reserved.</p>
+  </footer>
+
+  <div id="checkoutPanel" class="checkout-panel">
+  <button id="closeCheckout" class="close-checkout">X</button>
+
+  <h3>Checkout Summary</h3>
+
+  <div id="checkoutList"></div>
+  <p id="checkoutTotalText"></p>
+
+  <hr>
+
+  <h4>Customer Information</h4>
+
+  <label>Name:</label>
+  <input type="text" id="customerName" class="checkout-input">
+
+  <label>Phone:</label>
+  <input type="text" id="customerPhone" class="checkout-input">
+
+  <label>Address:</label>
+  <textarea id="customerAddress" class="checkout-input"></textarea>
+
+  <button id="confirmOrderBtn" class="confirm-order-btn">
+    Confirm Order
+  </button>
+
+  <p id="orderMessage" class="order-message"></p>
+</div>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Your message has been sent successfully!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+
+</body>
+</html>

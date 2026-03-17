@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | ROOTFY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cssin.css">
+</head>
+<body class="shop-page">
+  <header class="site-header">
+  <nav class="main-nav">
+    <div class="brand">
+        <a href="index.html" class="logo-link">
+            <img src="media/logo1.png" alt="ROOTFY logo" class="logo-img">
+        </a>
+    </div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="sell.html">Sell a Plant</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+      <li class="cart-dropdown">
+        <i class="bi bi-basket2-fill cart-icon"></i>
+        <span id="cartCount" class="cart-count">0</span>
+        <div class="cart-menu">
+          <div id="cartItems"></div>
+          <p id="cartTotal"></p>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+      </li>
+    </ul>
+
+    
+  </nav>
+
+
+  <div class="welcome-banner py-2">
+    <p>Welcome to <strong>ROOTFY</strong> find your perfect houseplant and bring nature home!</p>
+  </div>
+</header>
+
+  <div class="intro">
+    <p>Welcome to <b>ROOTFY</b> — explore our beautiful collection of houseplants</p>
+  </div>
+
+  <section class="shop-container">
+    <div class="card">
+      <img src="media/Monstera-Deliciosa.jpg" alt="Monstera Deliciosa">
+      <h3>Monstera</h3>
+      <p>Medium care - 40 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/Snake-Plant.jpg" alt="Snake Plant">
+      <h3>Snake Plant</h3>
+      <p>Easy care - 20 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/Golden-Pothos.jpg" alt="Golden Pothos">
+      <h3>Golden Pothos</h3>
+      <p>Easy care - 15 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/plant1.jpg" alt="Cactus">
+      <h3>Cactus</h3>
+      <p>Easy care - 25 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/plant2.jpg" alt="Aloe Vera">
+      <h3>Aloe Vera</h3>
+      <p>Easy care - 30 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/plant3.jpg" alt="Bamboo">
+      <h3>Bamboo</h3>
+      <p>Medium care - 40 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/plant4.jpg" alt="Succulent">
+      <h3>Succulent</h3>
+      <p>Medium care - 20 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/Fiddle-Leaf-Fig.jpg" alt="Fiddle Leaf Fig">
+      <h3>Fiddle Leaf</h3>
+      <p>Hard care - 55 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/plant5.jpg" alt="Spider Plant">
+      <h3>Spider Plant</h3>
+      <p>Medium care - 28 SAR</p>
+      <button>Add to cart</button>
+    </div>
+
+    <div class="card">
+      <img src="media/plant6.jpg" alt="Rubber Plant">
+      <h3>Rubber Plant</h3>
+      <p>Medium care - 38 SAR</p>
+      <button>Add to cart</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 ROOTFY. All rights reserved.</p>
+  </footer>
+
+  <div id="checkoutPanel" class="checkout-panel">
+  <button id="closeCheckout" class="close-checkout">X</button>
+
+  <h3>Checkout Summary</h3>
+
+  <div id="checkoutList"></div>
+  <p id="checkoutTotalText"></p>
+
+  <hr>
+
+  <h4>Customer Information</h4>
+
+  <label>Name:</label>
+  <input type="text" id="customerName" class="checkout-input">
+
+  <label>Phone:</label>
+  <input type="text" id="customerPhone" class="checkout-input">
+
+  <label>Address:</label>
+  <textarea id="customerAddress" class="checkout-input"></textarea>
+
+  <button id="confirmOrderBtn" class="confirm-order-btn">
+    Confirm Order
+  </button>
+
+  <p id="orderMessage" class="order-message"></p>
+</div>
+
+
+
+   <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/sell.js"></script>
+
+
+</body>
+</html>

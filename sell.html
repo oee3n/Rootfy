@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOTFY |Sell a Plant </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cssin.css">
+</head>
+<body class="sell-page">
+
+ 
+ <header class="site-header">
+  <nav class="main-nav">
+    <div class="brand">
+        <a href="index.html" class="logo-link">
+            <img src="media/logo1.png" alt="ROOTFY logo" class="logo-img">
+        </a>
+    </div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sell.html" class="active">Sell a Plant</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+      <li class="cart-dropdown">
+        <i class="bi bi-basket2-fill cart-icon"></i>
+        <span id="cartCount" class="cart-count">0</span>
+        <div class="cart-menu">
+          <div id="cartItems"></div>
+          <p id="cartTotal"></p>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+      </li>
+    </ul>
+
+    
+  </nav>
+
+
+  <div class="welcome-banner py-2">
+    <p>Welcome to <strong>ROOTFY</strong> find your perfect houseplant and bring nature home!</p>
+  </div>
+</header>
+
+ 
+  <div class="intro">
+    <p>Welcome to <b>ROOTFY</b> — sell your plant and help others find their green match </p>
+  </div>
+
+ 
+  <section class="form-section">
+    <h2>Sell Your Plant</h2>
+    <form>
+      <label>Plant Name:</label>
+      <input type="text" name="plantName" placeholder="e.g. Snake Plant" required>
+
+      <label>Price (SAR):</label>
+      <input type="number" name="price" placeholder="e.g. 30" required>
+
+      <label>Care Level:</label>
+      <select name="careLevel">
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+      <label>City:</label>
+     <select name="City">
+        <option> Jeddah</option>
+        <option>Makkah</option>
+        <option> Riyadh</option>
+        <option> Abha</option>
+        <option> Madinah</option>
+        <option>Dammam</option>
+     </select>
+
+      <label>Description:</label>
+      <textarea name="description" rows="4" placeholder="Describe your plant..."></textarea>
+
+      <label>Upload Image (optional):</label>
+      <input type="file" name="plantImage">
+
+      <button type="submit">Sell</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+  <p>&copy; 2025 ROOTFY. All rights reserved.</p>
+</footer>
+
+
+<div id="checkoutPanel" class="checkout-panel">
+  <button id="closeCheckout" class="close-checkout">X</button>
+
+  <h3>Checkout Summary</h3>
+
+  <div id="checkoutList"></div>
+  <p id="checkoutTotalText"></p>
+
+  <hr>
+
+  <h4>Customer Information</h4>
+
+  <label>Name:</label>
+  <input type="text" id="customerName" class="checkout-input">
+
+  <label>Phone:</label>
+  <input type="text" id="customerPhone" class="checkout-input">
+
+  <label>Address:</label>
+  <textarea id="customerAddress" class="checkout-input"></textarea>
+
+  <button id="confirmOrderBtn" class="confirm-order-btn">
+    Confirm Order
+  </button>
+
+  <p id="orderMessage" class="order-message"></p>
+</div>
+
+
+ <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/sell.js"></script>
+  <script src="js/shop.js"></script>
+
+</body>
+</html>

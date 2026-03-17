@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/cssin.css">
+  <title>Home</title>
+</head>
+<body>
+  <header class="site-header">
+  <nav class="main-nav">
+    <div class="brand">
+        <a href="index.html" class="logo-link">
+            <img src="media/logo1.png" alt="ROOTFY logo" class="logo-img">
+        </a>
+    </div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sell.html">Sell a Plant</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="contact-us.html">Contact</a></li>
+      <li class="cart-dropdown">
+        <i class="bi bi-basket2-fill cart-icon"></i>
+        <span id="cartCount" class="cart-count">0</span>
+        <div class="cart-menu">
+          <div id="cartItems"></div>
+          <p id="cartTotal"></p>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+      </li>
+    </ul>
+
+    
+  </nav>
+
+
+  <div class="welcome-banner py-2">
+    <p>Welcome to <strong>ROOTFY</strong> find your perfect houseplant and bring nature home!</p>
+  </div>
+</header>
+
+  <main>
+    <section class="hero-gradient text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-5 fw-bold mb-2">Welcome to ROOTFY</h1>
+        <p class="lead mb-4">Find your perfect houseplant and bring nature home — browse, learn, and grow with us.</p>
+        <a href="shop.html" class="btn btn-outline-light btn-lg me-2">shop Plant</a>
+        <a href="sell.html" class="btn btn-outline-light btn-lg">Sell a Plant</a>
+      </div>
+    </section>
+
+    <section class="plants-section">
+      <h3 class="section-title">Popular Plants</h3>
+      <div class="plant-grid">
+        <article class="plant-card">
+          <img src="media/Golden-Pothos.jpg" alt="Golden Pothos" class="plant-img">
+          <h4>Golden Pothos</h4>
+          <p>Easy care — 15 SAR</p>
+          <button class="btn-buy">Add to Cart</button>
+        </article>
+
+        <article class="plant-card">
+          <img src="media/Snake-Plant.jpg" alt="Snake Plant" class="plant-img">
+          <h4>Snake Plant</h4>
+          <p>Easy care — 20 SAR</p>
+          <button class="btn-buy">Add to Cart</button>
+        </article>
+
+        <article class="plant-card">
+          <img src="media/Monstera-Deliciosa.jpg" alt="Monstera Deliciosa" class="plant-img">
+          <h4>Monstera Deliciosa</h4>
+          <p>Medium care — 40 SAR</p>
+          <button class="btn-buy">Add to Cart</button>
+        </article>
+
+        <article class="plant-card">
+          <img src="media/Fiddle-Leaf-Fig.jpg" alt="Fiddle Leaf Fig" class="plant-img">
+          <h4>Fiddle Leaf Fig</h4>
+          <p>Hard care — 55 SAR</p>
+          <button class="btn-buy">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container bg-white rounded-4 shadow-sm p-4 p-md-5">
+        <h3 class="text-success text-center mb-4">Why Choose ROOTFY?</h3>
+        <div class="row text-center g-4">
+          <div class="col-6 col-lg-3">
+            <i class="bi bi-flower1 display-5 text-success"></i>
+            <h6 class="mt-2">Healthy Plants</h6>
+            <p class="text-muted mb-0">Grown with care.</p>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <i class="bi bi-truck display-5 text-success"></i>
+            <h6 class="mt-2">Fast Delivery</h6>
+            <p class="text-muted mb-0">Same-day city delivery.</p>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <i class="bi bi-credit-card-2-front display-5 text-success"></i>
+            <h6 class="mt-2">Easy Payment</h6>
+            <p class="text-muted mb-0">Cash or online.</p>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <i class="bi bi-chat-dots display-5 text-success"></i>
+            <h6 class="mt-2">Free Care Tips</h6>
+            <p class="text-muted mb-0">Expert guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 ROOTFY. All rights reserved.</p>
+  </footer>
+
+  <div id="checkoutPanel" class="checkout-panel">
+  <button id="closeCheckout" class="close-checkout">X</button>
+
+  <h3>Checkout Summary</h3>
+
+  <div id="checkoutList"></div>
+  <p id="checkoutTotalText"></p>
+
+  <hr>
+
+  <h4>Customer Information</h4>
+
+  <label>Name:</label>
+  <input type="text" id="customerName" class="checkout-input">
+
+  <label>Phone:</label>
+  <input type="text" id="customerPhone" class="checkout-input">
+
+  <label>Address:</label>
+  <textarea id="customerAddress" class="checkout-input"></textarea>
+
+  <button id="confirmOrderBtn" class="confirm-order-btn">
+    Confirm Order
+  </button>
+
+  <p id="orderMessage" class="order-message"></p>
+</div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

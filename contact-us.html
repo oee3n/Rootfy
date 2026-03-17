@@ -1,0 +1,154 @@
+[2:56 PM, 12/11/2025] ايناس🤍🤍: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROOTFY | Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cssin.css">
+</head>
+<body>
+  <header class="site-header">
+  <nav class="main-nav">
+    <div class="brand">
+        <a href="index.html" class="logo-link">
+            <img src="media/logo1.png" alt="ROOTFY logo" class="logo-img">
+        </a>
+    </div>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sell.html">Sell a Plant</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="contact-us.html" class="active">Contact</a></li>
+      <li class="cart-dropdown">
+        <i class="bi bi-basket2-fill cart-icon"></i>
+        <span id="cartCount" class="cart-count">0</span>
+        <div class="cart-menu">
+          <div id="cartItems"></div>
+          <p id="cartTotal"></p>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+      </li>
+    </ul>
+
+    
+  </nav>
+
+
+  <div class="welcome-banner py-2">
+    <p>Welcome to <strong>ROOTFY</strong> find your perfect houseplant and bring nature home!</p>
+  </div>
+</header>
+
+  <main class="contact-main">
+    <form id="contactForm" action="#" method="post">
+      <h2>Contact Us</h2>
+      <div class="grid">
+        <div class="field">
+          <label for="firstName">First Name <span class="req">*</span></label>
+          <input type="text" id="firstName" name="firstName" placeholder="E.g., Asayel"
+                 required minlength="2" maxlength="30"
+                 pattern="^[A-Za-z][A-Za-z\s'-]{1,29}$"
+                 title="Letters, spaces, apostrophes, or hyphens (2–30 characters)">
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name <span class="req">*</span></label>
+          <input type="text" id="lastName" name="lastName" placeholder="E.g., Alayda"
+                 required minlength="2" maxlength="30"
+                  pattern="^[A-Za-z][A-Za-z\s'\-]{1,29}$"
+                 title="Letters, spaces, apostrophes, or hyphens (2–30 characters)">
+        </div>
+
+        <fieldset class="field span-2">
+          <legend>Gender <span class="req">*</span></legend>
+          <div class="gender-options">
+            <label class="radio"><input type="radio" name="gender" value="female" required> Female</label>
+            <label class="radio"><input type="radio" name="gender" value="male"> Male</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="mobile">Mobile <span class="req">*</span></label>
+          <input type="tel" id="mobile" name="mobile" placeholder="+9665XXXXXXXX"
+                 required pattern="^\+?\d{9,15}$"
+                 title="Use digits with optional + (9–15 digits). Example: +9665XXXXXXX">
+        </div>
+
+        <div class="field">
+          <label for="dob">Date of Birth <span class="req">*</span></label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="field span-2">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com"
+                 required maxlength="80">
+        </div>
+
+        <div class="field">
+          <label for="language">Preferred Language <span class="req">*</span></label>
+          <select id="language" name="language" required>
+            <option value="" selected disabled>Choose one…</option>
+            <option value="english">English</option>
+            <option value="arabic">Arabic</option>
+            <option value="french">French</option>
+          </select>
+        </div>
+
+        <div class="field span-2">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message"
+                    placeholder="Tell us about your plant question or selling request…"
+                    required minlength="10" maxlength="800" rows="6"></textarea>
+          <small class="hint">10–800 characters</small>
+        </div>
+      </div>
+
+      <button type="submit" class="c-btn">Send Message</button>
+    </form>
+
+    <div id="contactMessages"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 ROOTFY. All rights reserved.</p>
+  </footer>
+
+  <div id="checkoutPanel" class="checkout-panel">
+  <button id="closeCheckout" class="close-checkout">X</button>
+
+  <h3>Checkout Summary</h3>
+
+  <div id="checkoutList"></div>
+  <p id="checkoutTotalText"></p>
+
+  <hr>
+
+  <h4>Customer Information</h4>
+
+  <label>Name:</label>
+  <input type="text" id="customerName" class="checkout-input">
+
+  <label>Phone:</label>
+  <input type="text" id="customerPhone" class="checkout-input">
+
+  <label>Address:</label>
+  <textarea id="customerAddress" class="checkout-input"></textarea>
+
+  <button id="confirmOrderBtn" class="confirm-order-btn">
+    Confirm Order
+  </button>
+
+  <p id="orderMessage" class="order-message"></p>
+</div>
+
+   <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
